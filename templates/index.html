@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+  <link href="IEStyleSheet.css" rel="stylesheet" />
+  <!--[endif]-->
+
+  <!--[if !IE]> -->
+  <link href="StyleSheet.css" rel="stylesheet" type="text/css" media="only screen" />
+  <link href="MobileStyleSheet.css" rel="stylesheet" type="text/css"
+    media="only screen and (max-device-width: 480px) , only screen and (-webkit-min-device-pixel-ratio: 2) , screen and (-webkit-device-pixel-ratio:1.5)" />
+  <!-- <![endif]-->
+
+  <!--[if IEMobile]-->
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+  <link href="MobileStyleSheet.css" rel="stylesheet" />
+  <!--[endif]-->
+
+
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/icons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png">
+  <link rel="manifest" href="/static/icons/site.webmanifest">
+  <link rel="mask-icon" href="/static/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/static/icons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/static/icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Bootstrap 4 CSS -->
+  <meta charset="UTF-8">
+  <meta name="description" content="A Progressive Web App that autogenerates a material list based on user input.">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0.7"> 
+  <meta name="theme-color" content="#030303">
+
+
+
+
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+  <!-- Font Awesome CSS -->
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+  <meta name="description" content="A Progressive Web App that autogenerates a material list based on user input.">
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <link rel="icon" sizes="512x512" href="{{ url_for('static', filename='MLM3000.png') }}">
+  <meta name="theme-color" content="#030303">
+  <link rel="manifest" href="manifest.json">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0.7">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+ </head>
+
+
+<body class="bottom white-preview">
+  <div id="mySidenav" class="sidenav">
+    <a href="{{ url_for('form') }}"><br><i class="w3-xlarge fas fa-home w3-text-light-blue"></i>Home</a>
+    <a href="{{ url_for('count') }}"><i class="fas fa-calculator w3-text-light-blue"></i>Count Helper</a>
+    <a href="{{ url_for('todo') }}"><i class="fas fa-check-square w3-text-light-blue"></i>To-do List</a>
+    <a href="{{ url_for('calendar') }}"><i class="fas fa-calendar w3-text-light-blue"></i>Calendar</a>
+    <a href="{{ url_for('documents') }}"><i class="fas fa-calendar w3-text-light-blue"></i>Documents</a>
+
+  </div>
+  <div id="main">
+    <span class="sidebar-button" style="font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776;</span>
+  </div>
+
+  <div class="tile w3-xlarge" id="tile-1" style="background:#222222">
+    <!-- ===============================NAV TABS======================================================== -->
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+      <div class="slider"></div>
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+          aria-selected="true"><i class="fas fa-plug"></i> Walls</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+          aria-selected="false"><i class="fas fa-lightbulb"></i> Ceilings</a>
+      </li>
+    </ul>
+    <form method="POST" action="{{ url_for('form') }}">
+      <!-- ===============================WALLS=========================================================== -->
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="background" style="color: #fffdfde9">
+
+          <div class="tab-content">
+            <div class="btn-container w3-center" style="color:#fffdfde9; background:#222222; margin-top:20px;">
+              <img src="/static/standard.png" class="standard-icon" style=" position: relative;top: -14px; right:-5px;"
+                width="36" height="36" alt="Icon">
+              <label class="switch btn-color-mode-switch">
+                <input class="color_mode" type="checkbox" name="outlet_type" id="color_mode" value="1">
+                <label for="color_mode" data-on="Decora" data-off="Standard"
+                  class="btn-color-mode-switch-inner"></label>
+              </label>
+              <img src="/static/decoras.png" class="decora-icon" style="position: relative;top: -14px; right:5px;"
+                width="36" height="36" alt="Icon">
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+              integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <script type="text/javascript" src="script.js"></script>
+            <!-- ==========================DUPLEX OUTLETS=================== -->
+            <details id="duplexOutlets">
+              <summary>
+                <i class="fa fa-info-circle" aria-hidden="true"></i> Duplex Outlets:
+                <span class="w3-text-orange" id="duplexOutletsTotal"></span>
+                <br>
+                <label for="standard" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;Typical Bracket Box:</label>
+                <input style="margin-left:6px;" class="w3-dark-grey w3-text-white" type="number" id="standard"
+                  name="standard" placeholder="0" />
+                <br>
+              </summary>
+              <!-- <label for="decora" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;Typical Bracket Box:</label>
+              <input  class="w3-dark-grey w3-text-white" type="number" id="decora" name="decora" placeholder="0" />
+              <br> -->
+              <label for="gfci" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;GFCI:</label>
+              <input style="margin-left:115px;" class="w3-dark-grey w3-text-white" type="number" id="gfci" name="gfci"
+                placeholder="0" />
+              <br>
+              <label for="cutin" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;Cut-in:</label>
+              <input style="margin-left:109px;" class="w3-dark-grey w3-text-white" type="number" id="cutin" name="cutin"
+                placeholder="0" />
+              <br>
+              <label for="surface" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;Surface Mounted:</label>
+              <input style="margin-left:30px;" class="w3-dark-grey w3-text-white" type="number" id="surface"
+                name="surface" placeholder="0" />
+              <br>
+              <label for="1switch" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;Controlled(switched):</label>
+              <input style="margin-left:0px;" class="w3-dark-grey w3-text-white" type="number" id="1switch"
+                name="1switch" placeholder="0" />
+            </details>
+            <!--==========================QUAD OUTLETS=====================-->
+            <details id="quadOutlets">
+              <summary><i class="fa fa-info-circle" aria-hidden="true"></i> Quad Outlets: <span class="w3-text-orange"
+                  id="quadOutletsTotal"></span><br> <label for="quad_standard"
+                  class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;Typical Bracket Box:</label>
+                <input style="margin-left:12px;" class='w3-dark-grey w3-text-white' type="number" id="quad_standard"
+                  name="quad_standard" placeholder="0" /><br>
+              </summary>
+
+              <!-- <label for="quad_decora" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;Decora:</label>
+              <input class='w3-dark-grey w3-text-white' type="number" id="quad_decora" name="quad_decora"
+                placeholder="0" /><br> -->
+
+              <label for="quad_gfci" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;GFCI:</label>
+              <input style="margin-left:119px;" class='w3-dark-grey w3-text-white' type="number" id="quad_gfci"
+                name="quad_gfci" placeholder="0" /><br>
+
+              <label for="quad_cutin" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;Cut-in:</label>
+              <input style="margin-left:113px;" class='w3-dark-grey w3-text-white' type="number" id="quad_cutin"
+                name="quad_cutin" placeholder="0" /><br>
+
+              <label for="quad_surface" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;Surface
+                Mounted:</label>
+              <input style="margin-left:35px;" class='w3-dark-grey w3-text-white' type="number" id="quad_surface"
+                name="quad_surface" placeholder="0" /><br>
+
+              <label for="quad_controlled" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;Controlled
+                (Switched):</label>
+              <input class='w3-dark-grey w3-text-white' type="number" id="quad_controlled" name="quad_controlled"
+                placeholder="0" /><br>
+
+            </details>
+            <!-- ========================FURNITURE FEEDS===================== -->
+            <details id="furnitureFeeds">
+              <summary><i class="fa fa-info-circle" aria-hidden="true"></i>Furniture Feeds: <span class="w3-text-orange"
+                  id="furnitureFeedsTotal"></span><br><label for="3-wire"
+                  class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;3-Wire</label>
+                <input style="margin-left:8px;" class='w3-dark-grey w3-text-white' type="number" id="3-wire"
+                  name="3-wire" placeholder="0" /><br>
+              </summary>
+              <label for="4-wire" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;**4-wire</label>
+              <input class='w3-dark-grey w3-text-white' type="number" id="4-wire" name="4-wire" placeholder="0" /><br>
+            </details>
+            <!--==========================DATA BOX=========================== -->
+            <details id="dataBox">
+              <summary><i class="fa fa-info-circle" aria-hidden="true"></i>Data Box: <span class="w3-text-orange"
+                  id="dataBoxTotal"></span><br> <label for="rough_in_data"
+                  class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;Rough-in:</label>
+                <input class='w3-dark-grey w3-text-white' type="number" id="rough_in_data" name="rough_in_data"
+                  placeholder="0"><br>
+              </summary>
+              <table>
+
+                <label for="cutin_data"
+                  class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;Cut-in:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input class='w3-dark-grey w3-text-white' type="number" id="cutin_data" name="cutin_data"
+                  style="margin-left:5px;" placeholder="0"><br>
+              </table>
+            </details>
+            <!-- =========================LIGHT SWITCHES=========================== -->
+            <details id="lightSwitches">
+              <summary>
+                <i class="fa fa-info-circle" aria-hidden="true"></i>Light Switches:
+                <span class="w3-text-orange" id="lightSwitchesTotal"></span><br>
+                <table>
+                  <tr>
+                    <th>
+                      <label style="padding:2px;" for="hv_dimming"
+                        class="w3-text-blue custom-label">Line-Voltage(dimming):</label>
+                    </th>
+                    <th>
+                      <span style="font-weight: bold;" class="w3-small w3-text-blue-gray">Cut-in</span>
+                    </th>
+                    <th>
+                      <input class="w3-dark-grey w3-text-white" type="number" id="hv_dimmingCI" name="hv_dimmingCI"
+                        style="width: 50px" placeholder="0" />
+                    </th>
+                    <th>
+                      <span style="font-weight: bold;" class="w3-small w3-text-blue-gray">Bracket Box</span>
+                    </th>
+                    <th>
+                      <input class="w3-dark-grey w3-text-white" type="number" id="hv_dimming" name="hv_dimming"
+                        style="width: 50px" placeholder="0" />
+                    </th>
+                  </tr>
+                </table>
+                <table>
+                  <tr>
+                    <th>
+                      <label for="lv_switch" class="w3-text-blue custom-label">LV/Cat5:</label>
+                    </th>
+                    <th>
+                      <span style="margin-left:75px;" class="w3-small w3-text-blue-grey">Cut-in</span>
+                    </th>
+                    <th>
+                      <input class="w3-dark-grey w3-text-white" type="number" id="lv_switchCI" name="lv_switchCI"
+                        style="width: 50px" placeholder="0" />
+                    </th>
+                    <th>
+                      <span class="w3-small w3-text-blue-grey">Bracket Box</span>
+                    </th>
+                    <th>
+                      <input class="w3-dark-grey w3-text-white" type="number" id="lv_switch" name="lv_switch"
+                        style="width: 50px" placeholder="0" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label style="display: flex; justify-content: center;" for="hv_switch"
+                        class="w3-text-blue custom-label">Line-Voltage:</label>
+                    </th>
+                    <th>
+                      <span style="margin-left:77px;" class="w3-small w3-text-blue-grey">Cut-in</span>
+                    </th>
+                    <th>
+                      <input class="w3-dark-grey w3-text-white" type="number" id="hv_switchCI" name="hv_switchCI"
+                        style="width: 50px" placeholder="0" />
+                    </th>
+                    <th>
+                      <span class="w3-small w3-text-blue-grey">Bracket Box</span>
+                    </th>
+                    <th>
+                      <input class="w3-dark-grey w3-text-white" type="number" id="hv_switch" name="hv_switch"
+                        style="width: 50px" placeholder="0" />
+                    </th>
+                  </tr>
+                </table>
+              </summary>
+            </details>
+            <!-- ===========================FLOOR DEVICES========================== -->
+            <details id="floorDevices">
+              <summary><i class="fa fa-info-circle" aria-hidden="true"></i>Floor Devices: <span class="w3-text-orange"
+                  id="floorDevicesTotal"></span><br>
+                <label for="FC6in" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;6" Floor Device:</label>
+                <input class='w3-dark-grey w3-text-white' type="number" id="FC6in" name="FC6in" placeholder="0" /><br>
+              </summary>
+              <label for="FC4in" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;4" Floor Device:</label>
+              <input class='w3-dark-grey w3-text-white' type="number" id="FC4in" name="FC4in" placeholder="0" /><br>
+            </details>
+            <!--=============================INSTAHOTS============================== -->
+            <details id="instaHots" style="margin-bottom: 90px;">
+              <summary><i class="fa fa-info-circle" aria-hidden="true"></i>Instahots: <span class="w3-text-orange"
+                  id="instaHotsTotal"></span><br>
+                <label for="wh_120" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;2-pole 208V 40A:</label>
+                <input style="margin-left:42px;" class='w3-dark-grey w3-text-white' type="number" id="wh_120"
+                  name="wh_120" placeholder="0" /><br>
+              </summary>
+              <label for="wh_277" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;*Single-Pole 277V 30A:</label>
+              <input class='w3-dark-grey w3-text-white' type="number" id="wh_277" name="wh_277" placeholder="0" /><br>
+              <label for="wh_277v" class="w3-text-blue custom-label">&nbsp;&nbsp;&nbsp;Single-Pole 277V 40A:</label>
+              <input style="margin-left:5px;" class='w3-dark-grey w3-text-white' type="number" id="wh_277v"
+                name="wh_277v" placeholder="0" /><br>
+            </details>
+
+            
+          </div>
+        </div>
+      </div>
+      <!--=========================================CEILINGS======================================================== -->
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="ceilings">
+
+        </div>
+
+      </div>
+
+  </div>
+  </div>
+  <!--==========================================GENERATE BUTTON====================================================== -->
+  <input type="submit" value="Generate" class="w3-bottom w3-xxlarge w3-block  w3-green">
+  </form>
+  <!--===========================================NAV TABS FUNCTION=============================================== -->
+  <!-- jQuery JS -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <!-- Bootstrap JS -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js'></script>
+  <script type="text/javascript">
+ 
+
+  </script>
+  <script src="static/index.js"></script>
+
+</body>
+
+</html>

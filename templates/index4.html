@@ -1,0 +1,228 @@
+
+<html>
+
+<head>  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+  <link href="IEStyleSheet.css" rel="stylesheet" />
+  <!--[endif]-->
+
+  <!--[if !IE]> -->
+  <link href="StyleSheet.css" rel="stylesheet" type="text/css" media="only screen" />
+  <link href="MobileStyleSheet.css" rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px) , only screen and (-webkit-min-device-pixel-ratio: 2) , screen and (-webkit-device-pixel-ratio:1.5)" />
+  <!-- <![endif]-->
+
+   <!--[if IEMobile]--> 
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+  <link href="MobileStyleSheet.css" rel="stylesheet" /> 
+  <!--[endif]-->
+
+
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/icons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png">
+  <link rel="manifest" href="/static/icons/site.webmanifest">
+  <link rel="mask-icon" href="/static/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/static/icons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/static/icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Bootstrap 4 CSS -->
+  <meta charset="UTF-8">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+  <!-- Font Awesome CSS -->
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+  <meta name="description" content="A Progressive Web App that autogenerates a material list based on user input.">
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <link rel="icon" sizes="512x512" href="{{ url_for('static', filename='MLM3000.png') }}">
+  <meta name="theme-color" content="#030303">
+  <link rel="manifest" href="manifest.json">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0.7">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Style Section -->
+</head>
+<style type="text/css">
+    body {
+        
+        display: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        border: 1px solid #fff;
+        border-radius: 1rem;
+        background-color: #1f1e1e;
+    
+        }
+</style> 
+<google-sheets-html-origin><table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" cellpadding="0" dir="ltr" style="table-layout: fixed; font-size: 10pt; font-family: Arial; width: 0px;">
+    <thead>
+      <tr style="color: rgb(0, 0, 0); height: 40px;">
+        <th><div style="max-height: 83px;">Job Documents</div></th>
+      </tr>
+    </thead><colgroup><col width="30"><col width="262"><col width="528"><col width="38"></colgroup>
+    <tbody>
+      <tr style="color: rgb(0, 0, 0); height: 43px;">
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 32px;">
+        <td rowspan="1" colspan="4" data-sheets-value="{'1':2,'2':'Job Name -'# of Installed Devices!G10:I10''}" style="border-right: 3px solid rgb(0, 0, 0); border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: top; background-color: rgb(11, 83, 148); font-size: 15pt; color: rgb(204, 204, 204);">Job Name -'# of Installed Devices!G10:I10'</td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 62px;">
+        <td style="border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-bottom: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-bottom: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 62px;">
+        <td style="border-right: 1px solid rgb(217, 217, 217); border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67);"></td>
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'To-do Lists'}" style="border-right: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: Comfortaa; font-size: 32pt; font-weight: bold; text-decoration-line: underline; color: rgb(141, 192, 121); text-align: center;">To-do Lists</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 22px;">
+        <td rowspan="5" colspan="1" style="border-right: 1px solid rgb(217, 217, 217); border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67);"><div style="max-height: 220px;"></div></td>
+        <td rowspan="1" colspan="2" style="border-right: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 58px;">
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Walls Progress Sheet'}" style="border-right: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Walls Progress Sheet</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 58px;">
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Ceilings Progress Sheet'}" style="border-right: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Ceilings Progress Sheet</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 58px;">
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Trim Progress Sheet'}" style="border-right: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Trim Progress Sheet</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 24px;">
+        <td style="border-bottom: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-right: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 42px;">
+        <td style="border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-bottom: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-bottom: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 66px;">
+        <td style="border-right: 1px solid rgb(217, 217, 217); border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'Material Lists'}" style="border-right: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: Comfortaa; font-size: 32pt; font-weight: bold; text-decoration-line: underline; color: rgb(141, 192, 121); text-align: center;">Material Lists</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 52px;">
+        <td rowspan="5" colspan="1" style="border-right: 1px solid rgb(217, 217, 217); border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67);"><div style="max-height: 241px;"></div></td>
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Walls Material List'}" style="border-right: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Walls Material List</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 50px;">
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Ceilings Material List'}" style="border-right: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Ceilings Material List</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 53px;">
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Trim Material List'}" style="border-right: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Trim Material List</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 46px;">
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Shit I Forgot To Order-List.....'}" style="border-right: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Shit I Forgot To Order-List.....</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 40px;">
+        <td style="border-bottom: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-right: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 40px;">
+        <td style="border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-bottom: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-bottom: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 61px;">
+        <td style="border-right: 1px solid rgb(217, 217, 217); border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'Templates'}" style="border-right: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: Comfortaa; font-size: 32pt; font-weight: bold; text-decoration-line: underline; color: rgb(141, 192, 121); text-align: center;">Templates</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 46px;">
+        <td style="border-right: 1px solid rgb(217, 217, 217); border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Change Orders'}" style="border-right: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Change Orders</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 47px;">
+        <td style="border-right: 1px solid rgb(217, 217, 217); border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Circuitry Cross Reference'}" style="border-right: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Circuitry Cross Reference</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 46px;">
+        <td style="border-right: 1px solid rgb(204, 204, 204); border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67);"></td>
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Usful Formulas/Code Quick Reference'}" style="border-right: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Usful Formulas/Code Quick Reference</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 50px;">
+        <td style="border-right: 1px solid rgb(204, 204, 204); border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67);"></td>
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Circuitry Color Chart'}" style="border-right: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Circuitry Color Chart</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 43px;">
+        <td style="border-right: 1px solid rgb(204, 204, 204); border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67);"></td>
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Breakers turned Off/Circuits Found'}" style="border-right: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Breakers turned Off/Circuits Found</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 40px;">
+        <td style="border-right: 1px solid rgb(217, 217, 217); border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-bottom: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-right: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 33px;">
+        <td style="border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-bottom: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-bottom: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 61px;">
+        <td style="border-right: 1px solid rgb(204, 204, 204); border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'Panel Schedules'}" style="border-right: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: Comfortaa; font-size: 32pt; font-weight: bold; text-decoration-line: underline; color: rgb(141, 192, 121); text-align: center;">Panel Schedules</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 54px;">
+        <td rowspan="4" colspan="1" style="border-right: 1px solid rgb(204, 204, 204); border-left: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67);"><div style="max-height: 202px;"></div></td>
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Panel Schedule 1-42'}" style="border-right: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Panel Schedule 1-42</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 54px;">
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Panel Schedule 43-84'}" style="border-right: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Panel Schedule 43-84</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 54px;">
+        <td rowspan="1" colspan="2" data-sheets-value="{'1':2,'2':'- Panel Schedule 1-84'}" style="border-right: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: middle; background-color: rgb(67, 67, 67); font-family: 'Roboto Serif'; font-size: 26pt; color: rgb(164, 194, 244);">- Panel Schedule 1-84</td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 40px;">
+        <td rowspan="1" colspan="2" style="border-right: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+        <td style="border-right: 3px solid rgb(0, 0, 0); overflow: hidden; padding: 2px 3px; vertical-align: bottom; background-color: rgb(67, 67, 67);"></td>
+      </tr>
+      <tr style="color: rgb(0, 0, 0); height: 40px;">
+      </tr>
+    </tbody>
+  </table></google-sheets-html-origin>
