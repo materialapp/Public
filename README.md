@@ -44,29 +44,28 @@ or for Windows `cd venv\Scripts` then `.\activate`
 **Docker Container**
 I have included a Docker file as well as a docker-compose file. If you know what that is than i will assume you know how to get the server up and running with either one. If not, i suggest you look into it because docker has provided countless hours of learning and entertainment for myself. I am very proud to say that I was able to make  and upload my own docker container to DockerHub after years of being on the downloading side of things. Here is some screen shots of the app in action
 
-<img src="" width="400" />
-**Job Documents **
+**Home Screen**
+<img src="https://github.com/materialapp/Public/blob/main/screenshots/Homescreen.PNG" width="1200" />
+**In-app Material List**
+<img src="https://github.com/materialapp/Public/blob/main/screenshots/In-app_material_list.PNG " width="1200" />
+**Google Sheets Upload**
+<img src="https://github.com/materialapp/Public/blob/main/screenshots/sheetsUpload.PNG" width="1200" />
+**Counter Helper**
+<img src="https://github.com/materialapp/Public/blob/main/screenshots/Counter%20Helper.PNG" width="1200" />
+**Job Documents**
 <img src="https://github.com/materialapp/Public/blob/main/screenshots/Job%20Documents.PNG" width="1200" />
-** **
-
-** **
-
-<img src="https://github.com/materialapp/Public/blob/main/screenshots/Calendar.PNG" width="1200" />
-** **
-
-<img src="https://github.com/materialapp/Public/blob/main/screenshots/Production_Calendar.PNG" width="1200" />
-** **
-
-<img src="https://github.com/materialapp/Public/blob/main/screenshots/Wall_Progress_Sheet.PNG" width="1200" />
-** **
-
+**Material List**
 <img src="https://github.com/materialapp/Public/blob/main/screenshots/material%20list.PNG" width="1200" />
-** **
+**Walls Progress Sheet**
+<img src="https://github.com/materialapp/Public/blob/main/screenshots/Wall_Progress_Sheet.PNG" width="1200" />
+**Calendar**
+<img src="https://github.com/materialapp/Public/blob/main/screenshots/Calendar.PNG" width="1200" />
+**Production Calendar**
+<img src="https://github.com/materialapp/Public/blob/main/screenshots/Production_Calendar.PNG" width="1200" />
+**Circuitry Cross Reference Sheet**
 <img src="https://github.com/materialapp/Public/blob/main/screenshots/Makeup%20Sheet.PNG" width="1200" />
-** **
+**Panel Schedule**
 <img src="https://github.com/materialapp/Public/blob/main/screenshots/panel%20schedule_1-42.PNG" width="1200" />
-** **
 
-<img src="" width="400" />
-<img src="" width="400" />
+
 
