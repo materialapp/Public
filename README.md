@@ -1,6 +1,6 @@
 
 # The Lazy Electricians Helper App
-
+Hello, my name is Anthony and Im an Electrician who loves doing projects with what little free time I have. My most recent project is an app ive been working on the make my work day a little easier. Check it out......<br><br>
 This github repository is a on going project for developing the best electrical helper you will ever have. Guarenteed better than even your best apprentice on your crew. It started off as a simple **PWA**(Progressive Web App) to calculate the amount of material you need to order based off of how many plugs/switches/etc... the print on your job calls for. It has grown into an app that will allow you to download a custom material sheet, ready to be turned straight into the boss. It can also connect to a google account(currently only mine) and will make a whole set of google sheet documents for the entire course of the job. It will generate job specific **To-Do Lists** with the same info you gave the app to generate the **Material List**. It lists each task in order of a typical job with the quantity of items per task(see below). All you have to do is count the amount of Bracket Boxes/switch boxes/lights that were installed that day, update the To-Do list and you will have an overall percentage of completion for the job. It splits the projects up into 3 sections for each inspection that needs to be called: **Walls, Ceilings** and **Trim**. There is also a **Calendar** spreadsheet that can be used to be keep track of all ongoing jobs in your company. 
 
 **Calendar Columns**
